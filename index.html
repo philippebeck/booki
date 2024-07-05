@@ -36,64 +36,64 @@
         </ul>
     </nav>
 
+    <header>
+        <hgroup>
+            <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+            <p>En plein centre-ville ou en pleine nature</p>
+        </hgroup>
+
+        <form>
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            <input type="search" value="Marseille, France">
+
+            <button>
+                <i
+                    class="fa-solid fa-magnifying-glass" 
+                    aria-hidden="true"
+                    aria-label="Rechercher"
+                ></i>
+                <span class="sr-only">Rechercher</span>
+            </button>
+        </form>
+
+        <section class="filters">
+            <h2>Filtres</h2>
+
+            <ul>
+                <li>
+                    <button>
+                        <i class="fa-solid fa-money-bill-wave" aria-hidden="true"></i>
+                        <b>Economique</b>
+                    </button>
+                </li>
+                <li>
+                    <button>
+                        <i class="fa-solid fa-person" aria-hidden="true"></i>
+                        <b>Familial</b>
+                    </button>
+                </li>
+                <li>
+                    <button>
+                        <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                        <b>Romantique</b>
+                    </button>
+                </li>
+                <li>
+                    <button class="filter">
+                        <i class="fa-solid fa-fire" aria-hidden="true"></i>
+                        <b>Nos pépites</b>
+                    </button>
+                </li>
+            </ul>
+        </section>
+
+        <p>
+            <i class="fa-solid fa-info fa-xs" aria-hidden="true"></i>
+            <i>Plus de 500 logements sont disponibles dans cette ville</i>
+        </p>
+    </header>
+
     <main>
-        <header>
-            <hgroup>
-                <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
-                <p>En plein centre-ville ou en pleine nature</p>
-            </hgroup>
-
-            <form>
-                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-                <input type="search" value="Marseille, France">
-
-                <button>
-                    <i
-                        class="fa-solid fa-magnifying-glass" 
-                        aria-hidden="true"
-                        aria-label="Rechercher"
-                    ></i>
-                    <span class="sr-only">Rechercher</span>
-                </button>
-            </form>
-
-            <section class="filters">
-                <h2>Filtres</h2>
-
-                <ul>
-                    <li>
-                        <button>
-                            <i class="fa-solid fa-money-bill-wave" aria-hidden="true"></i>
-                            <b>Economique</b>
-                        </button>
-                    </li>
-                    <li>
-                        <button>
-                            <i class="fa-solid fa-person" aria-hidden="true"></i>
-                            <b>Familial</b>
-                        </button>
-                    </li>
-                    <li>
-                        <button>
-                            <i class="fa-solid fa-heart" aria-hidden="true"></i>
-                            <b>Romantique</b>
-                        </button>
-                    </li>
-                    <li>
-                        <button class="filter">
-                            <i class="fa-solid fa-fire" aria-hidden="true"></i>
-                            <b>Nos pépites</b>
-                        </button>
-                    </li>
-                </ul>
-            </section>
-
-            <p>
-                <i class="fa-solid fa-info fa-xs" aria-hidden="true"></i>
-                <i>Plus de 500 logements sont disponibles dans cette ville</i>
-            </p>
-        </header>
-
         <article id="accommodation">
             <h2>Hébergements à Marseille</h2>
 
@@ -249,6 +249,8 @@
                     </a>
                 </li>
             </ul>
+
+            <b>Afficher plus</b>
         </article>
 
         <section class="popular">
@@ -336,61 +338,61 @@
                 </li>
             </ul>
         </section>
-
-        <article id="activities">
-            <h2>Activités à Marseille</h2>
-
-            <ul>
-                <li>
-                    <a href="#">
-                        <figure>
-                            <img
-                                src="images/activities/vieux-port.webp"
-                                alt="Vieux port de Marseille"
-                            >
-                            <figcaption>Vieux-Port</figcaption>
-                        </figure>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        <figure>
-                            <img
-                                src="images/activities/pomegues.webp"
-                                alt="Fort de Pomegues"
-                            >
-                            <figcaption>Fort de Pomegues</figcaption>
-                        </figure>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        <figure>
-                            <img
-                                src="images/activities/calanques.webp"
-                                alt="Calanques"
-                            >
-                            <figcaption>Parc national des Calanques</figcaption>
-                        </figure>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        <figure>
-                            <img
-                                src="images/activities/notre-dame.webp"
-                                alt="Notre Dame"
-                            >
-                            <figcaption>Notre-Dame-de-la-Garde</figcaption>
-                        </figure>
-                    </a>
-                </li>
-            </ul>
-        </article>
     </main>
+
+    <article id="activities">
+        <h2>Activités à Marseille</h2>
+
+        <ul>
+            <li>
+                <a href="#">
+                    <figure>
+                        <img
+                            src="images/activities/vieux-port.webp"
+                            alt="Vieux port de Marseille"
+                        >
+                        <figcaption>Vieux-Port</figcaption>
+                    </figure>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <figure>
+                        <img
+                            src="images/activities/pomegues.webp"
+                            alt="Fort de Pomegues"
+                        >
+                        <figcaption>Fort de Pomegues</figcaption>
+                    </figure>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <figure>
+                        <img
+                            src="images/activities/calanques.webp"
+                            alt="Calanques"
+                        >
+                        <figcaption>Parc national des Calanques</figcaption>
+                    </figure>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <figure>
+                        <img
+                            src="images/activities/notre-dame.webp"
+                            alt="Notre Dame"
+                        >
+                        <figcaption>Notre-Dame-de-la-Garde</figcaption>
+                    </figure>
+                </a>
+            </li>
+        </ul>
+    </article>
 
     <footer>
         <section>
