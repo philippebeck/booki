@@ -1,0 +1,310 @@
+/*! ********* GENERAL ********* */
+
+:root {
+  --black: #000;
+  --blue: #0065FC;
+  --gray: #F2F2F2;
+  --sky: #DEEBFF;
+  --white: #FFF;
+}
+
+* {
+  font-family: Raleway, sans-serif;
+}
+
+body,
+h1,
+h2,
+ul,
+figure,
+p {
+  margin: 0;
+}
+
+ul,
+button {
+  padding: 0;
+}
+
+h1 {
+  font-size: 1.4rem;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+b {
+  font-weight: 700;
+}
+
+.fa-solid {
+  color: var(--blue);
+}
+
+/*! ********* NAV ********* */
+
+nav {
+  display: flex;
+  flex-flow: column;
+  place-content: space-evenly;
+  place-items: center;
+  height: 115px;
+  text-align: center;
+
+  img {
+    width: 61px;
+  }
+
+  ul {
+    display: flex;
+    width: 100%;
+  }
+
+  li {
+    width: 50%;
+  }
+
+  a {
+    display: inline-block;
+    border-bottom: solid 2px var(--gray);
+    padding-bottom: 15px;
+    width: 100%;
+
+    &:hover,
+    &:focus {
+      border-color: var(--blue);
+      color: var(--blue);
+    }
+  }
+}
+
+/*! ********* MAIN ********* */
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 20px;
+
+  h3 {
+    font-size: 16px;
+  }
+
+  img {
+    object-fit: cover;
+  }
+
+  .card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  }
+
+  .gray {
+    color: var(--gray)
+  }
+}
+
+/*! ********* HEADER ********* */
+
+header {
+  display: flex;
+  flex-flow: column;
+  gap: 35px;
+
+  hgroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .fa-info {
+    border: solid 1px var(--gray);
+    border-radius: 50%;
+    padding: 8px;
+    width: 4px;
+    height: 4px;
+  }
+
+  i {
+    font-style: normal;
+  }
+}
+
+/*! ********* FORM ********* */
+
+form {
+  display: flex;
+  place-content: stretch;
+  height: 49px;
+
+  .fa-location-dot {
+    border-radius: 15px 0 0 15px;
+    padding: 15px 18px;
+    width: 13px;
+    background-color: var(--gray);
+    color: var(--black);
+  }
+
+  input {
+    border: solid 1px var(--gray);
+    padding: 15px;
+    width: calc(100% - 85px);
+    font-weight: bold;
+  }
+
+  .fa-magnifying-glass {
+    margin-left: -13px;
+    border-radius: 15px;
+    padding: 18px;
+    width: 13px;
+    height: 13px;
+    background-color: var(--blue);
+    color: var(--white);
+  }
+}
+
+/*! ********* FILTERS ********* */
+
+.filters {
+  display: flex;
+  flex-flow: column;
+  gap: 10px;
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  ul {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+  }
+
+  li {
+    box-sizing: border-box;
+    width: calc((100% - 10px) / 2);
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border: solid 2px var(--gray);
+    border-radius: 25px;
+    padding: 10px;
+    width: 100%;
+
+    &:hover,
+    &:focus {
+      background-color: var(--sky);
+    }
+  }
+}
+
+/*! ********* ACCOMMODATION ********* */
+
+[id=accommodation] {
+  width: 100%;
+}
+
+/*! ********* POPULAR ********* */
+
+.popular {
+  width: 100%;
+  margin-top: 50px;
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  a {
+    width: 30%;
+  }
+
+  .card {
+    display: flex;
+    margin-top: 33px;
+  }
+
+  img {
+    width: 33%;
+    height: 136px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+
+  figcaption {
+    width: 67%;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+
+  h3 {
+    margin-top: 10px;
+    margin-bottom: 4px;
+    font-size: 0.9rem;
+  }
+
+  p {
+    margin: 0;
+    font-size: 13px;
+  }
+
+  .rating {
+    margin-bottom: 5px;
+  }
+}
+
+/*! ********* RESPONSIVE ********* */
+
+@media (min-width: 768px) {}
+
+@media (min-width: 1024px) {
+  [id=accommodation] {
+    width: 65%;
+  }
+
+  .popular {
+    width: 32%;
+  }
+}
