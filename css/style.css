@@ -2,6 +2,7 @@
 
 :root {
   --black: #000;
+  --opacity-black: rgba(0, 0, 0, 0.2);
   --blue: #0065FC;
   --gray: #F2F2F2;
   --sky: #DEEBFF;
@@ -12,13 +13,59 @@
   font-family: Raleway, sans-serif;
 }
 
+main,
+form,
+nav ul,
+header > p,
+.filters ul,
+.filters button,
+.popular header,
+.popular .card {
+  display: flex;
+}
+
+nav,
+hgroup,
+footer,
+footer section,
+footer ul,
+body > header,
+.filters,
+.popular,
+.popular ul,
+.popular figcaption,
+[id=accommodation],
+[id=accommodation] ul,
+[id=accommodation] figcaption,
+[id=activities],
+[id=activities] ul {
+  display: flex;
+  flex-flow: column;
+}
+
 body,
 h1,
 h2,
+h3,
 ul,
 figure,
 p {
   margin: 0;
+}
+
+body > header,
+.popular,
+[id=accommodation],
+[id=activities] {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1440px;
+  padding: 20px;
+}
+
+main h2,
+[id=activities] h2 {
+  font-size: 1.35rem;
 }
 
 ul,
@@ -37,7 +84,7 @@ ul {
 img {
   max-width: 100%;
   height: auto;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 button {
@@ -62,19 +109,16 @@ b {
 /*! ********* NAV ********* */
 
 nav {
-  display: flex;
-  flex-flow: column;
-  place-content: space-evenly;
   place-items: center;
   height: 115px;
   text-align: center;
 
   img {
+    padding: 30px;
     width: 61px;
   }
 
   ul {
-    display: flex;
     width: 100%;
   }
 
@@ -99,13 +143,8 @@ nav {
 /*! ********* MAIN ********* */
 
 main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 1440px;
-  padding: 0 20px;
+  flex-flow: column-reverse;
+  gap: 30px;
 
   h3 {
     font-size: 16px;
@@ -129,40 +168,36 @@ main {
 
 /*! ********* HEADER ********* */
 
-header {
-  display: flex;
-  flex-flow: column;
-  gap: 35px;
-
-  hgroup {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  p {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .fa-info {
-    border: solid 1px var(--gray);
-    border-radius: 50%;
-    padding: 8px;
-    width: 4px;
-    height: 4px;
-  }
-
-  i {
-    font-style: normal;
+body {
+  & > header {
+    gap: 35px;
+  
+    hgroup {
+      gap: 8px;
+    }
+  
+    p {
+      align-items: center;
+      gap: 10px;
+    }
+  
+    .fa-info {
+      border: solid 1px var(--gray);
+      border-radius: 50%;
+      padding: 8px;
+      width: 4px;
+      height: 4px;
+    }
+  
+    i {
+      font-style: normal;
+    }
   }
 }
 
 /*! ********* FORM ********* */
 
 form {
-  display: flex;
   place-content: stretch;
   height: 49px;
 
@@ -176,6 +211,7 @@ form {
 
   input {
     border: solid 1px var(--gray);
+    outline: none;
     padding: 15px;
     width: calc(100% - 85px);
     font-weight: bold;
@@ -195,8 +231,6 @@ form {
 /*! ********* FILTERS ********* */
 
 .filters {
-  display: flex;
-  flex-flow: column;
   gap: 10px;
 
   h2 {
@@ -204,7 +238,6 @@ form {
   }
 
   ul {
-    display: flex;
     flex-flow: row wrap;
     gap: 10px;
   }
@@ -215,7 +248,6 @@ form {
   }
 
   button {
-    display: flex;
     align-items: center;
     gap: 5px;
     border: solid 2px var(--gray);
@@ -233,34 +265,46 @@ form {
 /*! ********* ACCOMMODATION ********* */
 
 [id=accommodation] {
-  width: 100%;
+  gap: 15px;
+
+  ul {
+    gap: 15px;
+  }
+
+  figure {
+    border-radius: 20px;
+  }
+
+  img {
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+    height: 124px;
+  }
+
+  figcaption {
+    gap: 8px;
+    padding: 5px 15px;
+  }
 }
 
 /*! ********* POPULAR ********* */
 
 .popular {
+  gap: 15px;
   width: 100%;
-  margin-top: 50px;
+  background-color: var(--gray);
 
   header {
-    display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
   ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    gap: 15px;
   }
 
   a {
     width: 30%;
-  }
-
-  .card {
-    display: flex;
-    margin-top: 33px;
   }
 
   img {
@@ -271,12 +315,10 @@ form {
   }
 
   figcaption {
-    width: 67%;
-    padding-left: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    position: relative;
     box-sizing: border-box;
+    padding-left: 15px;
+    width: 67%;
   }
 
   h3 {
@@ -291,7 +333,51 @@ form {
   }
 
   .rating {
-    margin-bottom: 5px;
+    position: absolute;
+    bottom: 5px;
+  }
+}
+
+/*! ********* ACTIVITIES ********* */
+
+[id=activities] {
+  gap: 30px;
+
+  ul {
+    gap: 15px;
+  }
+
+  figure {
+    border-radius: 20px;
+    box-shadow: 0 3px 15px var(--opacity-black);
+  }
+
+  img {
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+    height: 141px;
+  }
+
+  figcaption {
+    padding: 20px;
+    font-weight: bold;
+  }
+}
+
+/*! ********* FOOTER ********* */
+
+footer {
+  gap: 50px;
+  margin-top: 35px;
+  padding: 30px;
+  background-color: var(--gray);
+
+  section {
+    gap: 25px;
+  }
+
+  ul {
+    gap: 15px;
   }
 }
 
