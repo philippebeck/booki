@@ -216,7 +216,7 @@ form {
 /*! ********* FILTERS ********* */
 
 .filters {
-  gap: 10px;
+  gap: 20px;
 
   h2 {
     font-size: 1.1rem;
@@ -253,8 +253,9 @@ main {
   flex-flow: column-reverse;
   gap: 30px;
 
-  h3 {
-    font-size: 1rem;
+  h3,
+  p {
+    font-size: 0.9rem;
   }
 
   figure:not(.rating) {
@@ -285,7 +286,8 @@ main {
 
   figcaption {
     gap: 8px;
-    padding: 5px 15px;
+    margin-top: -5px;
+    padding: 5px;
   }
 }
 
@@ -325,7 +327,6 @@ main {
   h3 {
     margin-top: 10px;
     margin-bottom: 4px;
-    font-size: 0.9rem;
   }
 
   p {
@@ -335,7 +336,7 @@ main {
 
   .rating {
     position: absolute;
-    bottom: 5px;
+    bottom: 10px;
   }
 }
 
@@ -385,16 +386,32 @@ footer {
 
 @media (min-width: 768px) {
   nav,
+  footer,
   .popular ul,
   [id=accommodation] ul,
-  [id=activities] ul,
-  footer {
+  [id=activities] ul {
     flex-flow: row wrap;
+  }
+
+  main,
+  .header,
+  [id=activities] {
+    margin: 30px 50px;
+  }
+
+  .popular,
+  [id=accommodation],
+  [id=activities] {
+    padding: 30px;
   }
 
   nav {
     place-content: space-between;
     height: 79px;
+
+    img {
+      padding: 30px 50px;
+    }
 
     ul {
       gap: 68px;
@@ -413,6 +430,10 @@ footer {
     }
   }
 
+  .header {
+    padding: 0;
+  }
+
   form {
     input {
       width: fit-content;
@@ -429,13 +450,22 @@ footer {
   }
 
   .filters {
+    ul {
+      gap: 15px;
+    }
+
     li {
       width: fit-content;
+    }
+
+    button {
+      font-size: 1rem;
     }
   }
 
   main {
-    flex-flow: column;;
+    flex-flow: column;
+    gap: 50px;
   }
 
   [id=accommodation] {
@@ -444,6 +474,14 @@ footer {
 
     li {
       width: calc((100% - 30px) / 3);
+    }
+
+    figure:not(.rating) {
+      height: 207px;
+    }
+
+    img {
+      height: 124px;
     }
   }
 
@@ -456,8 +494,14 @@ footer {
   }
 
   [id=activities] {
+    width: calc(100% - 100px);
+
+    ul {
+      gap: 30px;
+    }
+
     li {
-      width: calc((100% - 45px) / 4);
+      width: calc((100% - 90px) / 4);
     }
 
     figure {
@@ -479,6 +523,7 @@ footer {
 
   footer {
     gap: 30px;
+    margin: 0 50px;
 
     section {
       width: calc((100% - 60px) / 3);
@@ -487,6 +532,11 @@ footer {
 }
 
 @media (min-width: 1024px) {
+  .filters {
+    flex-flow: row;
+    place-items: center;
+  }
+
   main {
     flex-flow: row;
   }
@@ -514,6 +564,10 @@ footer {
 
     img {
       height: 380px;
+    }
+
+    figcaption {
+      height: 59px;
     }
   }
 }
