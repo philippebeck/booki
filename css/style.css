@@ -331,7 +331,7 @@ main {
 
   p {
     margin: 0;
-    font-size: 13px;
+    font-size: 0.9rem;
   }
 
   .rating {
@@ -373,10 +373,7 @@ footer {
   padding: 30px;
   background-color: var(--gray);
 
-  section {
-    gap: 25px;
-  }
-
+  section,
   ul {
     gap: 15px;
   }
@@ -469,11 +466,16 @@ footer {
   }
 
   [id=accommodation] {
+    gap: 30px;
     border-radius: 20px;
     background-color: var(--gray);
 
+    ul {
+      gap: 30px;
+    }
+
     li {
-      width: calc((100% - 30px) / 3);
+      width: calc((100% - 60px) / 3);
     }
 
     figure:not(.rating) {
@@ -486,10 +488,15 @@ footer {
   }
 
   .popular {
+    gap: 20px;
     border-radius: 20px;
 
+    ul {
+      gap: 20px;
+    }
+
     li {
-      width: calc((100% - 30px) / 3);
+      width: calc((100% - 40px) / 3);
     }
   }
 
@@ -532,13 +539,13 @@ footer {
 }
 
 @media (min-width: 1024px) {
+  main,
   .filters {
     flex-flow: row;
-    place-items: center;
   }
 
-  main {
-    flex-flow: row;
+  .filters {
+    place-items: center;
   }
 
   [id=accommodation] {
@@ -546,10 +553,12 @@ footer {
   }
 
   .popular {
+    gap: 30px;
     width: 32%;
 
     ul {
       flex-flow: column;
+      gap: 30px;
     }
 
     li {
