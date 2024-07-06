@@ -65,7 +65,6 @@ main figure,
   box-sizing: border-box;
   padding: 20px;
   width: 100%;
-  max-width: 1440px;
 }
 
 main h2,
@@ -429,6 +428,7 @@ footer {
 
   .header {
     padding: 0;
+    width: calc(100% - 100px);
   }
 
   form {
@@ -539,6 +539,11 @@ footer {
 }
 
 @media (min-width: 1024px) {
+  body {
+    margin: 0 auto;
+    max-width: 1440px;
+  }
+
   main,
   .filters {
     flex-flow: row;
