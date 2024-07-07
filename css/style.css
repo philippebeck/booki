@@ -77,9 +77,16 @@ p {
   margin: 0;
 }
 
-main figure,
+main figure:not(.rating),
 [id=activities] figure {
+  overflow: hidden;
   border-radius: 20px;
+
+  &:hover img,
+  &:focus img {
+    transform: scale(1.2);
+    transition: transform 1s ease-in-out;
+  }
 }
 
 .header,
@@ -284,7 +291,7 @@ main {
   }
 
   figure:not(.rating) {
-    padding: 5px;
+    padding: 5px 5px 0;
     background-color: white;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
   }
@@ -310,9 +317,10 @@ main {
   }
 
   figcaption {
-    gap: 8px;
-    margin-top: -5px;
+    place-content: space-between;
+    margin-top: 5px;
     padding: 5px;
+    height: 35%;
   }
 }
 
@@ -345,7 +353,7 @@ main {
   figcaption {
     position: relative;
     box-sizing: border-box;
-    padding-left: 15px;
+    padding-left: 20px;
     width: 67%;
   }
 
