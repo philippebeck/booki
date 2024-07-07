@@ -7,20 +7,10 @@
 
     <title>Booki</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="description" content="Trouvez votre hébergement pour des vacances de rêve, en plein centre-ville ou en pleine nature !">
 
-    <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap"
-    >
-
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-    >
-
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/fa.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -43,10 +33,10 @@
         </hgroup>
 
         <form>
-            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-            <input type="search" value="Marseille, France">
+            <label class="fa-solid fa-location-dot" for="search" aria-label="Rechercher"></label>
+            <input type="search" id="search" value="Marseille, France">
 
-            <button>
+            <button aria-label="Rechercher">
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <b>Rechercher</b>
             </button>
@@ -261,7 +251,7 @@
                         <figure>
                             <img 
                                 src="./images/accommodation/soleil-matin.webp"
-                                alt="Chambre d'hôtel montrant un lit"
+                                alt="Chambre double avec fenêtre, miroir & téléphone mural"
                             >
 
                             <figcaption>
@@ -286,7 +276,7 @@
                         <figure>
                             <img
                                 src="images/accommodation/coeur-eau.webp"
-                                alt="Image de la chambre d'hôtel montrant un lit"
+                                alt="Chambre double avec fenêtre & banc de lit"
                             >
 
                             <figcaption>
@@ -312,7 +302,7 @@
                         <figure>
                             <img
                                 src="images/accommodation/bleu-blanc.webp"
-                                alt="Image de la chambre d'hôtel montrant un lit"
+                                alt="Chambre double"
                             >
 
                             <figcaption>
@@ -345,7 +335,7 @@
                     <figure>
                         <img
                             src="images/activities/vieux-port.webp"
-                            alt="Vieux port de Marseille"
+                            alt="Panne flottante du Vieux-Port avec de nombreux bateaux & vue sur Notre-Dame de la Garde"
                         >
                         <figcaption>Vieux-Port</figcaption>
                     </figure>
@@ -357,7 +347,7 @@
                     <figure>
                         <img
                             src="images/activities/pomegues.webp"
-                            alt="Fort de Pomegues"
+                            alt="Fort de Pomegues entouré de rochers"
                         >
                         <figcaption>Fort de Pomegues</figcaption>
                     </figure>
@@ -369,7 +359,7 @@
                     <figure>
                         <img
                             src="images/activities/calanques.webp"
-                            alt="Calanques"
+                            alt="Crique de falaises rocheuses aux Calanques entre Marseille & Cassis"
                         >
                         <figcaption>Parc national des Calanques</figcaption>
                     </figure>
@@ -381,7 +371,7 @@
                     <figure>
                         <img
                             src="images/activities/notre-dame.webp"
-                            alt="Notre Dame"
+                            alt="Notre-Dame-de-la-Garde sur sa colline entourée par la ville de Marseille"
                         >
                         <figcaption>Notre-Dame-de-la-Garde</figcaption>
                     </figure>
