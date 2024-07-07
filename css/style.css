@@ -33,6 +33,10 @@
   font-family: Raleway, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 main,
 form,
 nav ul,
@@ -160,6 +164,7 @@ nav {
     &:focus {
       border-color: var(--blue);
       color: var(--blue);
+      transition: all 1s ease-in-out;
     }
   }
 }
@@ -262,6 +267,7 @@ form {
     &:hover,
     &:focus {
       background-color: var(--sky);
+      transition: background-color 1s ease-in-out;
     }
   }
 }
