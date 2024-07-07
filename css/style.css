@@ -1,5 +1,25 @@
 /*! ********* GENERAL ********* */
 
+@font-face {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    local("Raleway-Regular"),
+    url("/fonts/Raleway-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src:
+    local("Raleway-Bold"),
+    url("/fonts/Raleway-Bold.woff2") format("woff2");
+}
+
 :root {
   --black: #000;
   --opacity-black: rgba(0, 0, 0, 0.2);
@@ -103,7 +123,7 @@ a {
 }
 
 b {
-  font-weight: 700;
+  font-weight: bold;
 }
 
 .fa-solid {
@@ -179,7 +199,7 @@ form {
 
   .fa-location-dot {
     border-radius: 15px 0 0 15px;
-    padding: 15px 18px;
+    padding: 15px 17px 15px 19px;
     width: 13px;
     background-color: var(--gray);
     color: var(--black);
