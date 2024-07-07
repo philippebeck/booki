@@ -410,6 +410,11 @@ footer {
   ul {
     gap: 15px;
   }
+
+  a:hover,
+  a:focus {
+    text-decoration: underline;
+  }
 }
 
 /*! ********* RESPONSIVE ********* */
