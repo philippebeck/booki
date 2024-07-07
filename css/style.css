@@ -7,7 +7,7 @@
   font-display: swap;
   src:
     local("Raleway-Regular"),
-    url("/fonts/Raleway-Regular.woff2") format("woff2");
+    url("../fonts/Raleway-Regular.woff2") format("woff2");
 }
 
 @font-face {
@@ -17,7 +17,7 @@
   font-display: swap;
   src:
     local("Raleway-Bold"),
-    url("/fonts/Raleway-Bold.woff2") format("woff2");
+    url("../fonts/Raleway-Bold.woff2") format("woff2");
 }
 
 :root {
