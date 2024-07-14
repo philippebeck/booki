@@ -17,7 +17,7 @@ Educational project of OpenClassrooms revisited with :
 ## Installation
 
 -  To clone the project => use your terminal with this command :  
-`git clone https://github.com/OpenClassrooms-Student-Center/Project-Booki.git`  
+`git clone https://github.com/philippebeck/booki.git`  
 
 or  
 
